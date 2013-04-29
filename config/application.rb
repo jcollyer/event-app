@@ -59,6 +59,11 @@ module CoderdojoWebapp
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    #fonts path
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf ) 
+
     # Configure to use minitest
     config.generators do |g|
       g.test_framework :mini_test, :spec => true, :fixture => false

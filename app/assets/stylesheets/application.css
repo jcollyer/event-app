@@ -12,3 +12,12 @@
  *= require_self
  *= require ./base
  */
+
+@font-face {
+  font-family: "leagegothic";
+  src: url("leaguegothic-regular-webfont.eot");
+  src: local("☺"),
+    url("leaguegothic-regular-webfont.woff") format("woff"),
+    url("LeagueGothic-Regular.otf") format("opentype"),
+    url("leaguegothic-regular-webfont.svg#leaguegothic-regular-webfont") format("svg");
+  }

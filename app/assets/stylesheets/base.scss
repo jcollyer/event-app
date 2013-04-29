@@ -1,5 +1,7 @@
 // Application scss.
 
+//$font-heading: 'leagegothic', sans-serif;
+
 body {
   //background:url(/assets/back.jpg) no-repeat left top #f03813;
   background-size:100%;
@@ -7,7 +9,8 @@ body {
   font-size: 110%;
 }
 
-h1{
+h2{
+  font-family:'leagegothic' italic;
   margin:2px;
 }
 
