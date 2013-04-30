@@ -21,3 +21,11 @@
     url("LeagueGothic-Regular.otf") format("opentype"),
     url("leaguegothic-regular-webfont.svg#leaguegothic-regular-webfont") format("svg");
   }
+
+@font-face {
+  font-family: "ostrich";
+  src: url("ostrich-bold-webfont.eot");
+  src: local("☺"),
+    url("ostrich-bold-webfont.woff") format("woff"),
+    url("ostrich-bold-webfont.svg#ostrich-bold-webfont") format("svg");
+  }
