@@ -7,15 +7,17 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <div class="logo_main">
-      <div class="logo2">
+    <div class="logo_main_wrap">
+      <div class="logo_main">
+        <div class="letter c"></div>
+        <div class="letter d"></div>
         <%= link_to "", root_path %>
-    </div>
-</div> 
+      </div> 
+    </div>  
+    
     <div class="container">   
       <%= yield %>
     </div>
-    <%= render "layouts/logo" %>
+    <%= render "layouts/footer_logo" %>
 </body>
 </html>
