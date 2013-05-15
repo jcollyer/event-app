@@ -7,17 +7,26 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <div id="nav_container">
+      <div id="yingyang">
+        <%= image_tag("coder-dojo-logo.png") %>
+      </div>
+      <ul id="nav_main">
+        <li><a class="home_link"href="#">home</a></li>
+        <li><a class="register_link"href="#">register</a></li>
+        <li><a class="lessons_link"href="#">lessons</a></li>
+        <li class="left_link">CoderDojo.com</li>
+      </ul>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+<!--     <%= render "layouts/footer_logo" %>
     <div class="logo_main_wrap">
       <div class="logo_main">
         <div class="letter c"></div>
         <div class="letter d"></div>
-        <%= link_to "", root_path %>
-      </div> 
-    </div>  
-    
-    <div class="container">   
-      <%= yield %>
-    </div>
-    <%= render "layouts/footer_logo" %>
+      </div>
+    </div> -->
 </body>
 </html>

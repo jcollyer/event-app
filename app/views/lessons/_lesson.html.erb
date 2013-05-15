@@ -1,15 +1,14 @@
 <div class="lesson">
-  <% if lesson.upcoming_event.present? %>
-    <div class="new_lesson_title small-12 large-12 columns">
-      <h2 class="event_header">Upcoming Event - <%= lesson.title %><h2>
-    </div>
-  <% end %>
-
   <div class="new_lesson small-12 large-6 columns">
+    <h2 class="event_header">Upcoming Event </h2>
     <a href="<%= lesson_path(lesson) %>" class="cover-art">
       <% if lesson.upcoming_event.present? %>
         <div class="date"><h2><%= lesson.upcoming_event.start_time.strftime("%A, %B %-d") %></h2></div>
       <% end %>
+
+
+       <div class="date"><h2>September 3rd</h2></div>
+
       <div class="info">
         <h2></h2>
         <p><%= lesson.summary %></p>
@@ -19,18 +18,45 @@
   </div>
   <div class="new_lesson_info small-12 large-6 columns">
     <% if lesson.upcoming_event.present? %>
+      <h2> <%= lesson.title %></h2>
       <div class="newl new_lesson_time">
-        <p><%= lesson.upcoming_event.start_time.strftime("%l:%M%p") %> - <%= lesson.upcoming_event.end_time.strftime("%l:%M%p") %>
-        </p>  
+        <p class="lesson_time">time</p>
+        <h3><%= lesson.upcoming_event.start_time.strftime("%l:%M%p") %> - <%= lesson.upcoming_event.end_time.strftime("%l:%M%p") %>
+        </h3>
       </div>
       <div class="newl new_lesson_map">
-          <p><a href="http://maps.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&q=GitHub+548+4th+St+San+Francisco+CA+94107&fb=1&gl=us&hq=GitHub&hnear=0x8085807f61c2ffaf:0xdff3c67eda3111b,548+4th+St,+San+Francisco,+CA+94107&cid=0,0,5518987758852468533&sa=X&ei=9D9zUeSFA8ObiQLCpID4AQ&ved=0CIcBEPwSMAA">GitHub</a>
-        </p>
+        <p class="lesson_map">map</p>
+          <h3>
+            <a href="http://maps.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&q=GitHub+548+4th+St+San+Francisco+CA+94107&fb=1&gl=us&hq=GitHub&hnear=0x8085807f61c2ffaf:0xdff3c67eda3111b,548+4th+St,+San+Francisco,+CA+94107&cid=0,0,5518987758852468533&sa=X&ei=9D9zUeSFA8ObiQLCpID4AQ&ved=0CIcBEPwSMAA">GitHub</a>
+        </h3>
       </div>
       <div class="newl new_lesson_teacher">
-        <p><%= link_to lesson.upcoming_event.teacher_github_username, "https://github.com/#{lesson.upcoming_event.teacher_github_username}" %>
-        </p>
+        <p class="lesson_teacher">teacher</p>
+        <h3><%= link_to lesson.upcoming_event.teacher_github_username, "https://github.com/#{lesson.upcoming_event.teacher_github_username}" %>
+        </h3>
       </div>
     <% end %>
+
+
+
+    <h2>Understand Functins</h2>
+    <div class="newl new_lesson_time">
+      <p class="lesson_time">time</p>
+      <h3>3:00pm</h3>
+    </div>
+    <div class="newl new_lesson_map">
+        <p class="lesson_map">map</p>
+        <h3>
+          <a href="http://maps.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&q=GitHub+548+4th+St+San+Francisco+CA+94107&fb=1&gl=us&hq=GitHub&hnear=0x8085807f61c2ffaf:0xdff3c67eda3111b,548+4th+St,+San+Francisco,+CA+94107&cid=0,0,5518987758852468533&sa=X&ei=9D9zUeSFA8ObiQLCpID4AQ&ved=0CIcBEPwSMAA">GitHub</a>
+      </h3>
+    </div>
+    <div class="newl new_lesson_teacher">
+      <p class="lesson_teacher">teacher</p>
+      <h3>John Hoyt</h3>
+    </div>
+
+
+
+
   </div>
 </div>
