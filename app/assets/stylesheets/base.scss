@@ -34,19 +34,14 @@ label{
   font-family:'leagegothic' sans-serif;
 }
 input[type="text"]{
-  color:#444;
-  font-size:140%;
+  border:none;
+  font-size:114%;
   padding:0px 10px 0 10px;
-  margin:0px;
-  line-height:0.8em;
-  height:60px;
-  margin:0px;
-  padding:0px;
-  line-height:0.8em;
-  padding:0px 10px 0 10px;
-  &::-webkit-input-placeholder{
-    color:#444;
-    margin:0px;
+  &:focus{
+    background:#efefef;
+    &::-webkit-input-placeholder{
+      color:#444;
+    }
   }
 }
 
@@ -72,14 +67,15 @@ a.biglink {
 
 #nav_container{
   position:relative;
+  max-width:80em;
   #yingyang{
-    left:380px;
-    top:14px;
+    left:257px;
+    top:93px;
     position:absolute;
     -webkit-animation: rollon 1.1s ease-in-out, counterClockwiseSpin 1s linear;
     z-index:9;
   }
-  #nav_main{
+  .nav_main{
     background:#1e97c4;
     clear:both;
     font-family:"leagegothic", Georgia, serif;
@@ -116,11 +112,12 @@ a.biglink {
       }
       &.left_link{
         border:none;
-        color:white;
+        color:#eee;
         float:left;
-        font-size:300%;
+        font-size:180%;
+        letter-spacing:0.05em;
         line-height:1em;
-        margin:0 0px 0 100px;
+        margin:26px 0 0 9px;
         -webkit-animation: fadeIn 1s ease-in;
         a{
           color:#eee;
@@ -143,7 +140,7 @@ a.biglink {
     opacity:0.8s;
   }
   100%{
-    left:380px;
+    left:257px;
     opacity:1;
    // -webkit-transform:rotate(-360deg);
   }
@@ -178,7 +175,6 @@ a.biglink {
 .cover-art {
   position: relative;
   display: inline-block;
-
   .date {
     font-size: 50%;
     padding: 1% 20px;
@@ -210,7 +206,6 @@ a.biglink {
 .newsletter {
   background: rgba(0,0,0,0.1);
   max-width:80em;
-  padding:15px;
 }
 
 .lesson {
