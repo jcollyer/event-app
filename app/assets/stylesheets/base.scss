@@ -43,6 +43,7 @@ label{
 input[type="text"]{
   border:none;
   font-size:114%;
+  margin:0px;
   &:focus{
     background:#efefef;
     &::-webkit-input-placeholder{
@@ -67,6 +68,7 @@ a.biglink {
   font-size:130%;
   margin:0px;
   padding:12px;
+  width:100%;
 }
 .email_label{
   position:absolute;
@@ -91,9 +93,6 @@ a.biglink {
   -webkit-animation: fadeIn 1s ease-in;
   a{
     color:#eee;
-    &:hover{
-      background:#1e97c4;
-    }
   }
 }
 
@@ -171,13 +170,11 @@ a.biglink {
 
 
 .home_info{
-  background-size:100%;
-  background-position:0 28%;
-
-  position:relative;
-  width:100%;
   p{
-    line-height:1.7em;
+    font-size:110%;
+    line-height:1.5em;
+    padding:30px 0px 17px 17px;
+
   }
 }
 
@@ -314,11 +311,12 @@ a.biglink {
   p.lesson_teacher{background:#08526d;}
 }
 
-.newl{
+.new_lesson_info_block{
   height:120px;
   line-height:0em;
   text-align:right;
-  padding:0 150px 0 0px;
+  padding:0 0px 0 0px;
+  position:relative;
   width:100%;
   p{
     a{
@@ -326,19 +324,6 @@ a.biglink {
     }
   }
 }
-
-.new_lesson_time{
-
-}
-.new_lesson_map{
-
-}
-.new_lesson_teacher{
-
-}
-
-
-
 
 .c {
   width: 4em;
@@ -426,6 +411,13 @@ a.biglink {
   border-radius: 50%;
   margin: 20px;
 }
+
+.footer{
+  background:#1e97c4;
+  height:120px;
+  max-width:80em;
+}
+
 
 .footer_logo_container {
   margin:-60px auto 0px;
@@ -533,15 +525,18 @@ a.biglink {
 
 
 .icon {
+  position:absolute;
   width: 80px;
   height: 80px;
   display: inline-block;
   border-radius: 50%;
-  margin: 20px;
+  margin: 0px 0px 0px 0px;
+  right:20px;
+  top:-90px;
 }
 
 .messages {
-  background: #4BCD6C;
+  background: #08526d;
   position: relative;
  // transition: background-color .3s ease;
   &:before {
@@ -580,7 +575,7 @@ a.biglink {
 }
 
 .map {
-  background: #FF8048;
+  background: #157aa1;
   position: relative;
   //transition: background-color .3s ease;
   &:hover {
@@ -590,7 +585,7 @@ a.biglink {
       content: '';
       width: 0; height: 0;
       border: 25px solid transparent;
-      border-left: 15px solid #FFE7D8;
+      border-left: 15px solid #ffffff;
       position: absolute;
       bottom: 12px;
       left: 50%;
@@ -614,7 +609,7 @@ a.biglink {
       content: '';
       position: absolute;
       width: 40px; height: 40px;
-      //@include background-image(linear-gradient(left, rgba(255,255,255,1) 50%,rgba(255,231,216,1) 50%));
+      background:#ffffff;
       top: 10px;
       left: 50%;
       margin: 0 0 0 -20px;
@@ -625,13 +620,13 @@ a.biglink {
           position: relative;
           width: 20px; height: 20px;
           display: block;
-          background: #FF8048;
+          background: #ffffff;
           border-radius: 50%;
           z-index: 3;
           top: 10px;
           left: 50%;
           margin: 0 0 0 -10px;
-          box-shadow: inset 0 3px 0 rgba(0,0,0,0.2);
+          box-shadow: inset 0 3px 0 rgba(0,0,0,0.6);
         }
   }
 
@@ -639,20 +634,16 @@ a.biglink {
 
 
 .clock {
-  background: #EB4D4D;
+  background: #1e97c4;
   position: relative;
-  //transition: background-color .3s ease;
-  &:hover {
-    background: darken(#EB4D4D,5%);
-  }
   .rim {
     border: 5px solid #fff;
-      width: 60px; height: 60px;
-      display: block;
-      border-radius: 50%;
-      position: relative;
-      top: 5px; left: 5px;
-      box-shadow: 0 3px 0 rgba(0,0,0,.15), inset 0 3px 0 rgba(0,0,0,.15);
+    width: 60px; height: 60px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    top: 7px; left: 10px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.15), inset 0 3px 0 rgba(0,0,0,.15);
   }
   .center {
     position: absolute;
@@ -673,7 +664,9 @@ a.biglink {
           box-shadow: 0 3px 0 rgba(0,0,0,0.2);
           display: block;
           transform: rotate(45deg);
-          top: -17px;
+          -ms-transform:rotate(45deg);
+          -webkit-transform:rotate(45deg);
+          top: -16px;
           left: 12px;
         }
         &:after {
@@ -685,6 +678,8 @@ a.biglink {
           box-shadow: 0 3px 0 rgba(0,0,0,0.2);
           display: block;
           transform: rotate(-45deg);
+          -ms-transform:rotate(-45deg);
+          -webkit-transform:rotate(-45deg);
           top: -10px;
           left: 9px;
         }

@@ -1,6 +1,6 @@
 <div class="lesson">
-  <div class="new_lesson small-12 large-6 columns">
-    <h2 class="event_header">Upcoming Event </h2>
+  <div class="new_lesson small-12 large-7 columns">
+    <h2 class="event_header">Understand Functins</h2>
     <a href="<%= lesson_path(lesson) %>" class="cover-art">
       <% if lesson.upcoming_event.present? %>
         <div class="date"><h2><%= lesson.upcoming_event.start_time.strftime("%A, %B %-d") %></h2></div>
@@ -16,54 +16,54 @@
       <img src="/assets/animations_in_javascript.jpg">
     </a>
   </div>
-  <div class="new_lesson_info small-12 large-6 columns">
+  <div class="new_lesson_info small-12 large-5 columns">
     <% if lesson.upcoming_event.present? %>
       <h2> <%= lesson.title %></h2>
       <div class="newl new_lesson_time">
-        <p class="lesson_time">time</p>
         <h3><%= lesson.upcoming_event.start_time.strftime("%l:%M%p") %> - <%= lesson.upcoming_event.end_time.strftime("%l:%M%p") %>
+        <p class="lesson_time">time</p>
         </h3>
       </div>
       <div class="newl new_lesson_map">
-        <p class="lesson_map">map</p>
-          <h3>
+        <h3>
             <a href="http://maps.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&q=GitHub+548+4th+St+San+Francisco+CA+94107&fb=1&gl=us&hq=GitHub&hnear=0x8085807f61c2ffaf:0xdff3c67eda3111b,548+4th+St,+San+Francisco,+CA+94107&cid=0,0,5518987758852468533&sa=X&ei=9D9zUeSFA8ObiQLCpID4AQ&ved=0CIcBEPwSMAA">GitHub</a>
         </h3>
+        <p class="lesson_map">map</p>
       </div>
       <div class="newl new_lesson_teacher">
-        <p class="lesson_teacher">teacher</p>
         <h3><%= link_to lesson.upcoming_event.teacher_github_username, "https://github.com/#{lesson.upcoming_event.teacher_github_username}" %>
+        <p class="lesson_teacher">teacher</p>
         </h3>
       </div>
     <% end %>
 
 
 
-    <h2>Understand Functins</h2>
-    <div class="newl new_lesson_time">
-      <p class="lesson_time">time</p>
+    <h2>Upcoming Event</h2>
+    <div class="new_lesson_info_block new_lesson_time">
       <h3>3:00pm</h3>
+      <p class="lesson_time">time</p>
       <a href="#" class="icon clock">
         <span class="rim">
           <span class="center"></span>
         </span>
       </a>
-      <a href="#" class="icon map">
-        <span class="pointer"></span>
-      </a>
-      <a href="#" class="icon messages">
-        <span class="bubble"></span>
-      </a>
     </div>
-    <div class="newl new_lesson_map">
-        <p class="lesson_map">map</p>
+    <div class="new_lesson_info_block new_lesson_map">
         <h3>
           <a href="http://maps.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&q=GitHub+548+4th+St+San+Francisco+CA+94107&fb=1&gl=us&hq=GitHub&hnear=0x8085807f61c2ffaf:0xdff3c67eda3111b,548+4th+St,+San+Francisco,+CA+94107&cid=0,0,5518987758852468533&sa=X&ei=9D9zUeSFA8ObiQLCpID4AQ&ved=0CIcBEPwSMAA">GitHub</a>
       </h3>
+      <p class="lesson_map">map</p>
+      <a href="#" class="icon map">
+        <span class="pointer"></span>
+      </a>
     </div>
-    <div class="newl new_lesson_teacher">
-      <p class="lesson_teacher">teacher</p>
+    <div class="new_lesson_info_block new_lesson_teacher">
       <h3>John Hoyt</h3>
+      <p class="lesson_teacher">teacher</p>
+      <a href="#" class="icon messages">
+        <span class="bubble"></span>
+      </a>
     </div>
 
 
