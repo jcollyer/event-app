@@ -70,12 +70,7 @@ a.biglink {
   padding:12px;
   width:100%;
 }
-.email_label{
-  position:absolute;
-  top:-40px;
-  font-size:180%;
-  width:400px;
-}
+
 
 .hh3{
   background:rgba(246, 95, 57,0.7);
@@ -173,7 +168,7 @@ a.biglink {
   p{
     font-size:110%;
     line-height:1.5em;
-    padding:30px 0px 17px 17px;
+    padding:40px 0px 17px 17px;
 
   }
 }
@@ -236,13 +231,13 @@ a.biglink {
 
 .badge_bowandarrow {
   background:url(badge-bowandarrow.png) no-repeat;
-  left:-30%;
+  right:80px;
   height:250px;
   opacity:0.4;
-  top:-40px;
+  top:-100px;
   position:absolute;
   width:250px;
-  z-index:-1;
+  z-index:1;
 }
 
 .badge_fencing {
@@ -257,7 +252,7 @@ a.biglink {
 
 .archive{
   background:#fef7cb;
-  margin:60px 0px 40px;
+  margin:60px 0px 0px;
   max-width:80em;
   padding:10px 5%;
   position:relative;
@@ -414,10 +409,24 @@ a.biglink {
 
 .footer{
   background:#1e97c4;
-  height:120px;
   max-width:80em;
+  padding:6px 0 0 0px;
 }
 
+.email_label{
+  font-size:180%;
+  padding:0 0 0 10px;
+}
+
+.footer_p {
+  font-family:'leagegothic' sans-serif;
+  font-size:90%;
+  line-height:1em;
+  margin:0 auto;
+  text-align:center;
+  padding:10px;
+  width:230px;
+}
 
 .footer_logo_container {
   margin:-60px auto 0px;
