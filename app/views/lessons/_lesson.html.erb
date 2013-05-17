@@ -1,5 +1,5 @@
 <div class="lesson">
-  <div class="new_lesson small-12 large-7 columns">
+  <div class="new_lesson small-12 large-6 columns">
     <h2 class="event_header">Understand Functins</h2>
     <a href="<%= lesson_path(lesson) %>" class="cover-art">
       <% if lesson.upcoming_event.present? %>
@@ -16,7 +16,7 @@
       <img src="/assets/animations_in_javascript.jpg">
     </a>
   </div>
-  <div class="new_lesson_info small-12 large-5 columns">
+  <div class="new_lesson_info small-12 large-6 columns">
     <% if lesson.upcoming_event.present? %>
       <h2> <%= lesson.title %></h2>
       <div class="newl new_lesson_time">
